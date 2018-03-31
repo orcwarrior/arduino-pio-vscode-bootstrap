@@ -11,23 +11,24 @@
 
 using util::Callback;
 
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+EventManager* eventMan = new EventManager();
+
+int ledState = 0;
+void ledHandler(Event *e)
+{
+  ledState = !ledState;
+  digitalWrite(LED_BUILTIN, ledState);
 }
 
-void ledOnHandler() {
-  delay(30);
-//   // turn the LED off by making the voltage LOW
-  digitalWrite(LED_BUILTIN, LOW);
-   // wait for a second
+
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  eventMan->addEventListener("secondPassed", BIND_FREE_CB(ledHandler));
 }
+
 void loop()
 {
-  digitalWrite(LED_BUILTIN, HIGH);
-  // delay(20);
-  delay(1);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(4);
-  // Callback<void()> ledCb = BIND_FREE_CB(&ledOnHandler);
-  // ledCb();
+  delay(1000);
+  eventMan->dispatchEvent("secondPassed", new Event("none"));
 }
