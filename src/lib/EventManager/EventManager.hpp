@@ -83,6 +83,7 @@ public:
       return this->addEventListener(eventName, handler);
     }
     event->push_back(handler);
+    return true;
   }
 
   void dispatchEvent(string eventName, Event *e)
