@@ -58,7 +58,7 @@ public:
   {
     if (this->events->find(eventName) != this->events->end())
     {
-      return &this->events->at(eventName);
+      return &(*this->events)[eventName];
     }
     else
     {
@@ -68,7 +68,8 @@ public:
 
   void defineEvent(string eventName)
   {
-    pair<string, vector<EventHandler>> newEvent(eventName, {});
+    vector<EventHandler> blankVector;
+    pair<string, vector<EventHandler>> newEvent(eventName, blankVector);
     this->events->insert(newEvent);
     printf("Event name: %s created!\n", newEvent.first.c_str());
   }
