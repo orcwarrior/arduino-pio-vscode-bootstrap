@@ -12,8 +12,9 @@ Another thing is JS-alike EventManager too keep actual project code maximally un
 - Code splited (in clumsy way) with Arduino only file (main.platform.h) and Debug only (main.debug.h) which provide for example easy way to emulate arduino.h package (which is actually done).
 - JS Alike EventManager that can register multiple events packing any number of listeners both as static function and member function with passed context (this). This was made possible thanks to: ...
 - Delegate Implementation included (http://www.codeproject.com/Articles/136799/Lightweight-Generic-C-Callbacks-or-Yet-Another-Del)
+- Intervals implementation
+- Make main() in debug run setup() loop() properly
 
 
 ### TO BE DONE:
-- Intervals implementation
 - Sending signals of called arduino function to some tool visualizing it would be cool :)
