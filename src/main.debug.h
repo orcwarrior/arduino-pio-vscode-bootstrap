@@ -1,7 +1,7 @@
 #include "./dummyLibs/Arduino.h"
 #include <stdio.h>
+#include "./lib/EventManager/EventManager.hpp"
 
-#include "./lib/Events/EventManager.hpp"
 int main()
 {
   const char* str = "Hi debugger, whatsapp?";
