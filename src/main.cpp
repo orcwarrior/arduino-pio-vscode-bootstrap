@@ -24,9 +24,9 @@ void ledOnHandler() {
 void loop()
 {
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(400);
+  delay(20);
   digitalWrite(LED_BUILTIN, LOW);
-  delay(150);
+  delay(15);
   // Callback<void()> ledCb = BIND_FREE_CB(&ledOnHandler);
   // ledCb();
 }
