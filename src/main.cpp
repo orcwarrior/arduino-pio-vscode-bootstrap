@@ -34,8 +34,11 @@ void setup()
   eventMan->addEventListener("secondPassed", BIND_FREE_CB(ledHandler));
   Interval* i = new Interval(BIND_FREE_CB(ledInterval), 1000);
   intervalMan->add(i);
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 700));
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1900));
+  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 200, true));
+  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 700, true));
+  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1800, true));
+  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1700, true));
+  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1600, true));
 }
 
 void loop()

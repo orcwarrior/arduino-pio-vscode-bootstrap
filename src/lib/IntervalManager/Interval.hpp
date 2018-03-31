@@ -9,10 +9,11 @@ typedef util::Callback<void(Interval *)> IntervalCallback;
 class Interval
 {
 public:
-  Interval(IntervalCallback cb, int interval)
+  Interval(IntervalCallback cb, int interval, bool once = false)
   {
     this->callback = cb;
     this->interval = interval;
+    this->once = once;
   }
 
   bool tryRun(long millis)
@@ -34,9 +35,12 @@ public:
 
   int getInterval() { return this->interval; }
 
+  bool isOneTime() { return this->once; }
+
 private:
   int interval = 1000;
   int nextRun = 0; // so it'll run interval cb at the beggining
+  bool once; // run interval only one time (handled by manager)
   IntervalCallback callback;
   
 };

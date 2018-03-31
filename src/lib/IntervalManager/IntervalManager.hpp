@@ -46,7 +46,11 @@ public:
     long curMillis = millis();
     if (lastRun + shortestInterval <= curMillis) {
       for (int idx = 0; idx < intervals->size(); ++idx) {
-        if ( (*this->intervals)[idx].tryRun(curMillis)) {
+        Interval* cur = &(*this->intervals)[idx];
+        if (cur->tryRun(curMillis)) {
+          if ( cur->isOneTime()) {
+            this->remove(cur);
+          }
           this->lastRun = curMillis;
         }
       }
