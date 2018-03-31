@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "gdb",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "name": "PlatformIO Debugger",
+            "target": "c:/Users/orcwa/Documents/PlatformIO/Projects/arduino-platformio-bootstrap-vscode/.pioenvs/nanoatmega328/firmware.elf",
+            "gdbpath": "C:/Users/orcwa/.platformio/penv/Scripts/piodebuggdb",
+            "autorun": [ "source .pioinit" ],
+            "preLaunchTask": "PlatformIO: Pre-Debug",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

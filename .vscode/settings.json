@@ -1,0 +1,41 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\Users\\orcwa\\.platformio\\penv\\Scripts;C:\\Users\\orcwa\\.platformio\\penv;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\ImageMagick-7.0.7-Q16;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\Users\\orcwa\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\;C:\\Program Files\\LLVM\\bin;C:\\Program Files\\CMake\\bin;C:\\Users\\orcwa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\orcwa\\AppData\\Roaming\\npm;C:\\Program Files\\Heroku\\bin;C:\\Users\\orcwa\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\MinGW\\bin;C:\\Program Files (x86)\\Ninja;C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.11.25503\\bin\\Hostx86\\x86;;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\ImageMagick-7.0.7-Q16;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Git\\cmd;C:\\Users\\orcwa\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\;C:\\Program Files\\LLVM\\bin;C:\\Program Files\\CMake\\bin;C:\\Users\\orcwa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\orcwa\\AppData\\Roaming\\npm;C:\\Program Files\\Heroku\\bin;C:\\Users\\orcwa\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Graphviz2.38\\bin\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\MinGW\\bin;C:\\Program Files (x86)\\Ninja;C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.11.25503\\bin\\Hostx86\\x86;",
+        "PLATFORMIO_CALLER": "vscode"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "files.associations": {
+        "map": "cpp",
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "associative_base": "cpp",
+        "basic_definitions": "cpp",
+        "char_traits": "cpp",
+        "cstddef": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "deque": "cpp",
+        "exception": "cpp",
+        "func_exception": "cpp",
+        "functional": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "iterator_base": "cpp",
+        "list": "cpp",
+        "memory": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "string": "cpp",
+        "type_traits": "cpp",
+        "ios": "cpp",
+        "sstream": "cpp",
+        "valarray": "cpp",
+        "serstream": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.dimInactiveRegions": false
+}

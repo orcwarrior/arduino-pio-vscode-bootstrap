@@ -1,0 +1,53 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "PlatformIO",
+            "args": [
+                "run"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Build (Arduino)",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/src/main.cpp",
+                "-o ${workspaceFolder}/.output/main.arduino.exe",
+                
+                "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/cores/arduino",
+                "-I C:/Users/orcwa/.platformio/packages/toolchain-atmelavr/avr/include",
+                "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/variants/standard",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "type": "shell",
+            "label": "Build (Debug)",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/main.debug.h",
+                "-o ${workspaceFolder}/.output/main.debug.exe",
+                
+                "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/cores/arduino",
+                // "-I C:/Users/orcwa/.platformio/packages/toolchain-atmelavr/avr/include",
+                // "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/variants/standard",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ]
+}
