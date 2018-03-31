@@ -1,3 +1,5 @@
+// Delegate implementation:
+// http://www.codeproject.com/Articles/136799/Lightweight-Generic-C-Callbacks-or-Yet-Another-Del
 #ifndef UTIL_CALLBACK_HPP
 #define UTIL_CALLBACK_HPP
 
