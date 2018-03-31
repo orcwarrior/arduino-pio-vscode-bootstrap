@@ -34,7 +34,16 @@
         "sstream": "cpp",
         "valarray": "cpp",
         "serstream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "cctype": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "istream_helpers": "cpp",
+        "locale": "cpp",
+        "ostream": "cpp",
+        "ostream_helpers": "cpp",
+        "streambuf": "cpp",
+        "string_iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.dimInactiveRegions": false
