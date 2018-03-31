@@ -20,7 +20,6 @@
                 "-g",
                 "${workspaceFolder}/src/main.cpp",
                 "-o ${workspaceFolder}/.output/main.arduino.exe",
-                
                 "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/cores/arduino",
                 "-I C:/Users/orcwa/.platformio/packages/toolchain-atmelavr/avr/include",
                 "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/variants/standard",
@@ -39,7 +38,6 @@
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/main.debug.h",
                 "-o ${workspaceFolder}/.output/main.debug.exe",
-                
                 "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/cores/arduino",
                 // "-I C:/Users/orcwa/.platformio/packages/toolchain-atmelavr/avr/include",
                 // "-I C:/Users/orcwa/.platformio/packages/framework-arduinoavr/variants/standard",
@@ -48,6 +46,12 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "presentation": {
+                "echo": true,
+                "reveal": "never",
+                "focus": false,
+                "panel": "new"
+            }
         }
     ]
 }
