@@ -1,0 +1,11 @@
+BasedOnStyle: LLVM
+IndentWidth: 2
+UseTab: Never
+BreakBeforeBraces: Linux
+Language: Cpp
+AllowShortIfStatementsOnASingleLine: true
+AllowShortFunctionsOnASingleLine : true
+IndentCaseLabels: false
+AlignConsecutiveAssignments: true
+BreakBeforeTernaryOperators: false
+BreakBeforeInheritanceComma: false
