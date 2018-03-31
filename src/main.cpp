@@ -23,7 +23,6 @@ void ledOnHandler() {
 }
 void loop()
 {
-  // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED_BUILTIN, HIGH);
   delay(400);
   digitalWrite(LED_BUILTIN, LOW);
