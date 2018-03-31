@@ -119,7 +119,20 @@ void analogWrite(uint8_t, int){
   printf("analogWrite called!");
 }
 
-unsigned long millis(void);
+#include <sys/time.h>
+
+unsigned long _millis() {
+  struct timeval tp;
+  gettimeofday(&tp, NULL);
+  return tp.tv_sec * 1000 + tp.tv_usec / 1000;
+}
+unsigned long startMillis = _millis();
+unsigned long millis() {
+  return _millis() - startMillis;
+}
+
+
+
 unsigned long micros(void);
 void delay(unsigned long){
   printf("delay called!");
