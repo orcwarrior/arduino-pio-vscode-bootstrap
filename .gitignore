@@ -1,2 +1,4 @@
 .pioenvs
 .piolibdeps
+.output/main.debug.exe
+.vscode/.BROWSE.*
