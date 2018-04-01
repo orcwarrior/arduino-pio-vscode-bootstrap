@@ -1,32 +1,17 @@
 #ifndef EVENT_EMITTER_HPP
 #define EVENT_EMITTER_HPP
 
-#include <map>
-#include <vector>
-#include <string>
-#include <stdio.h>
-#include <iostream>
 #include "./../callback.hpp"
 #include "./Event/Event.hpp"
 #include "./Event/TestEvent.hpp"
+#include <iostream>
+#include <map>
+#include <stdio.h>
+#include <string>
+#include <vector>
 
 typedef util::Callback<void(Event *)> EventHandler;
 using namespace std;
-
-class Dog
-{
-public:
-  string name;
-  Dog(string name)
-  {
-    this->name = name;
-  }
-  void bark(Event *e)
-  {
-    TestEvent *test = (TestEvent *)e;
-    printf("%s: Woof!!! %d\n", this->name.c_str(), test->val);
-  }
-};
 
 void myEventHandler(Event *e)
 {
@@ -37,34 +22,16 @@ void myEventHandler(Event *e)
 
 class EventManager
 {
+
 private:
   std::map<std::string, vector<EventHandler>> *events;
 
-public:
   EventManager()
   {
     this->events = new std::map<string, vector<EventHandler>>();
-    this->defineEvent("test");
-    this->addEventListener("notExistingEvent", BIND_FREE_CB(myEventHandler));
-
-    Dog *doggo = new Dog("Doggo");
-    this->addEventListener("notExistingEvent", BIND_MEM_CB(&Dog::bark, doggo));
-    
-    this->dispatchEvent("notExistingEvent", new TestEvent(666));
-
-    // Serial.println((*this->events)[key][1]);
-  };
-  vector<EventHandler> *getEvent(string eventName)
-  {
-    if (this->events->find(eventName) != this->events->end())
-    {
-      return &(*this->events)[eventName];
-    }
-    else
-    {
-      return NULL;
-    }
-  };
+  }
+  EventManager(EventManager const &) {};
+  void operator=(EventManager const &) = delete;
 
   void defineEvent(string eventName)
   {
@@ -74,11 +41,29 @@ public:
     printf("Event name: %s created!\n", newEvent.first.c_str());
   }
 
+  // static EventManager instance;
+
+public:
+  static EventManager* getInstance()
+  {
+    static EventManager instance;
+    return &instance;
+  };
+
+  // methods:
+  vector<EventHandler> *getEvent(string eventName)
+  {
+    if (this->events->find(eventName) != this->events->end()) {
+      return &(*this->events)[eventName];
+    } else {
+      return NULL;
+    }
+  };
+
   bool addEventListener(string eventName, EventHandler handler)
   {
     vector<EventHandler> *event = this->getEvent(eventName);
-    if (!event)
-    {
+    if (!event) {
       this->defineEvent(eventName);
       return this->addEventListener(eventName, handler);
     }
@@ -89,8 +74,7 @@ public:
   void dispatchEvent(string eventName, Event *e)
   {
     vector<EventHandler> *event = this->getEvent(eventName);
-    for (auto const &eventHandler : *event)
-    {
+    for (auto const &eventHandler : *event) {
       eventHandler(e);
     }
   }

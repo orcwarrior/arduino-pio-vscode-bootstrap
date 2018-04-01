@@ -12,7 +12,6 @@
 
 using util::Callback;
 
-EventManager* eventMan = new EventManager();
 IntervalManager* intervalMan= new IntervalManager();
 
 int ledState = 0;
@@ -31,18 +30,15 @@ void ledInterval(Interval* i) {
 void setup()
 {
   pinMode(LED_BUILTIN, OUTPUT);
-  eventMan->addEventListener("secondPassed", BIND_FREE_CB(ledHandler));
-  Interval* i = new Interval(BIND_FREE_CB(ledInterval), 1000);
-  intervalMan->add(i);
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 200, true));
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 700, true));
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1800, true));
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1700, true));
-  intervalMan->add(new Interval(BIND_FREE_CB(ledInterval), 1600, true));
+  EventManager* man = EventManager::getInstance();
+  man->addEventListener("test", BIND_FREE_CB(ledHandler));
 }
 
 void loop()
 {
   intervalMan->run();
+  EventManager* man = EventManager::getInstance();
+  man->dispatchEvent("test", new Event("test"));
+  
   // eventMan->dispatchEvent("secondPassed", new Event("none"));
 }
