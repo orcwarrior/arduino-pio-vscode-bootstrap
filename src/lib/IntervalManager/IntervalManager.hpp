@@ -10,11 +10,20 @@ using namespace std;
 const int INITIAL_INTERVAL = 1000;
 class IntervalManager
 {
-public:
+  private: 
   IntervalManager() {
     vector<Interval> initialVector;
     this->intervals = new vector<Interval>();
   }
+  IntervalManager(IntervalManager const &) = delete;
+  void operator=(IntervalManager const &) = delete;
+  
+public:
+  static IntervalManager* getInstance()
+  {
+    static IntervalManager instance;
+    return &instance;
+  };
 
   void add(Interval* i)
   {

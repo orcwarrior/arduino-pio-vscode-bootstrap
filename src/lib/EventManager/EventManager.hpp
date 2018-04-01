@@ -30,7 +30,7 @@ private:
   {
     this->events = new std::map<string, vector<EventHandler>>();
   }
-  EventManager(EventManager const &) {};
+  EventManager(EventManager const &) = delete;
   void operator=(EventManager const &) = delete;
 
   void defineEvent(string eventName)
